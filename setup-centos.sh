@@ -2,7 +2,7 @@
 
 
 ### install zsh
-yum -y install zsh
+sudo yum -y install zsh
 
 ### set login shell
 chsh -s /bin/zsh
