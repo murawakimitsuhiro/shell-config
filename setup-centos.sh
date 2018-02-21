@@ -1,3 +1,6 @@
+#!/usr/bin/bash
+
+
 ### install zsh
 yum -y install zsh
 

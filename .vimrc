@@ -6,8 +6,6 @@ let g:molokai_original = 1
 let g:rehash256 = 1
 set background=dark
 set cursorline
-hi CursorLine ctermbg=240
-hi CursorLine cterm=none
 
 set number " 行番号を常に表示
 set showmatch  "括弧入力時に反対側を表示
@@ -33,12 +31,19 @@ filetype plugin indent on "ファイルに応じたインデントオン"
 
 
 "########### プラグイン & dein.vim設定 ###########
+" dein自体の自動インストール
+let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
+let s:dein_dir = s:cache_home . '/dein'
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+if !isdirectory(s:dein_repo_dir)
+  call system('git clone https://github.com/Shougo/dein.vim ' . shellescape(s:dein_repo_dir))
+endif
+let &runtimepath = s:dein_repo_dir .",". &runtimepath"
+
 if &compatible
   set nocompatible
 endif
 set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
-
-call dein#begin(expand('~/.vim/dein'))
 
 call dein#add('Shougo/dein.vim')
 call dein#add('Shougo/vimproc.vim', {'build': 'make'})
