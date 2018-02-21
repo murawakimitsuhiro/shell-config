@@ -13,5 +13,5 @@ wget https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.vi
 wget https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.zshrc
 
 ### install tig
-rpm -ivh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm
-yum install -y tig
+sudo rpm -ivh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm
+sudo yum install -y tig
