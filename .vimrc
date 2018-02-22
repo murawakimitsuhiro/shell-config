@@ -65,7 +65,6 @@ call dein#add('Shougo/neocomplcache') "自動補完
 call dein#add('thinca/vim-visualstar') "ビジュアルで選択したものを検索してくれる
 call dein#add('drillbits/nyan-modoki.vim') "エンジニアの寿命のためのプラグイン
 
-0
 "文法チェック系
 call dein#add('scrooloose/syntastic')  "チェックツール
 call dein#add('leafgarland/typescript-vim')
