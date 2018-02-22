@@ -12,6 +12,8 @@ cd ~/
 wget https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.tigrc
 wget https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.vimrc
 wget https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.zshrc
+wget https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.dein.toml
+wget https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.dein_lazy.toml
 source ~/.zshrc
 source ~/.tigrc
 source ~/.vimrc

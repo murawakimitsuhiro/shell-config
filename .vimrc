@@ -49,6 +49,7 @@ if dein#load_state(s:dein_dir)
   call dein#end()
   call dein#save_state()
 endif
+
 " 不足プラグインの自動インストール
 if has('vim_starting') && dein#check_install()
   call dein#install()
@@ -64,13 +65,14 @@ call dein#add('Shougo/neocomplcache') "自動補完
 call dein#add('thinca/vim-visualstar') "ビジュアルで選択したものを検索してくれる
 call dein#add('drillbits/nyan-modoki.vim') "エンジニアの寿命のためのプラグイン
 
+0
 "文法チェック系
 call dein#add('scrooloose/syntastic')  "チェックツール
 call dein#add('leafgarland/typescript-vim')
 call dein#add('pmsorhaindo/syntastic-local-eslint.vim')
 call dein#add('hail2u/vim-css3-syntax') "cssのシンタックス
 
-call dein#end()
+"call dein#end()
 
 syntax on  "シンタックスハイライトをオンにする(これは最後に持ってこないと効かない
 
@@ -134,22 +136,23 @@ let g:neocomplcache_dictionary_filetype_lists = {
     \ }
 
 " Plugin key-mappings.
-inoremap <expr><C-g>     neocomplcache#undo_completion()
-inoremap <expr><C-l>     neocomplcache#complete_common_string()
+"inoremap <expr><C-g>     neocomplcache#undo_completion()
+"inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
 " Recommended key-mappings.
 " <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  return neocomplcache#smart_close_popup() . "\<CR>"
-endfunction
+"inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+"function! s:my_cr_function()
+"  return neocomplcache#smart_close_popup() . "\<CR>"
+"endfunction
+
 " <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplcache#close_popup()
-inoremap <expr><C-e>  neocomplcache#cancel_popup()
+"inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+"inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+"inoremap <expr><C-y>  neocomplcache#close_popup()
+"inoremap <expr><C-e>  neocomplcache#cancel_popup()
 
 "ファイル名指定なしで起動された場合にNERDTreeを起動
 autocmd StdinReadPre * let s:std_in=1
@@ -172,7 +175,6 @@ autocmd StdinReadPre * let s:std_in=1
 "  let g:session_autoload = 'no'
 "endif
 "unlet s:local_session_directory
-
 
 
 "癒やし

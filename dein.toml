@@ -8,9 +8,6 @@ depends = ['context_filetype.vim']
 [[plugins]] # カーソル位置のコンテキストのftを判定するライブラリ
 repo = 'Shougo/context_filetype.vim'
 
-[[plugins]] # nyan-modoki
-repo = 'nefo-mi/nyan-modoki.vim'
-
 [[plugins]] # toml syntax
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
