@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/murawakimitsuhiro/Documents/Work/VAZ_apps/new/app_swift/Pods'
+let g:netrw_dirhist_2='/Users/murawakimitsuhiro/Documents/_Xcode_Project/work/prof/PodTest/PodTest.xcodeproj'
+let g:netrw_dirhist_3='/Users/murawakimitsuhiro/.vim'
+let g:netrw_dirhist_4='/Users/murawakimitsuhiro/Documents/_Angular2_Projects/angular2-minimum-starter/app'
+let g:netrw_dirhist_5='/Users/murawakimitsuhiro/Documents/_Angular2_Projects/angular2-minimum-starter'

@@ -11,16 +11,22 @@ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 ### set login shell
 chsh -s /bin/zsh
 
-### download setting files
+### install svn
+yum install subversion
+
+### download shell setting files
 cd ~/
-wget -r https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.tigrc
-wget -r https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.vimrc
 wget -r https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.zshrc
-wget -r https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.dein.toml
-wget -r https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.dein_lazy.toml
+wget -r https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.tigrc
 source ~/.zshrc
 source ~/.tigrc
+
+### download vim setting files
+wget -r https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.vimrc
+wget -r https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.dein.toml
+wget -r https://raw.githubusercontent.com/murawakimitsuhiro/shell-config/master/.dein_lazy.toml
 source ~/.vimrc
+svn export https://github.com/murawakimitsuhiro/shell-config/trunk/.vim/
 
 ### install tig
 sudo rpm -ivh http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm
