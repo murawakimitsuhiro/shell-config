@@ -3,6 +3,7 @@
 
 ### install zsh
 sudo yum -y install zsh
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
 ### set login shell
 chsh -s /bin/zsh
