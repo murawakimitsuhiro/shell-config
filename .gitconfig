@@ -1,0 +1,33 @@
+[core]
+	excludesfile = /Users/murawakimitsuhiro/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = murawaki-村脇
+	email = mitsuhiromurawaki@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[url "https://github.com/"]
+	insteadOf = git://github.com/
+[merge]
+	tool = vimdiff
+
+[alias]
+  pbcopy = !printf "$1" | pbcopy
+  
+  # git de develop で、developブランチを抜けてマージ済のブランチを一括削除 
+  de = "!f () { git checkout $1; git branch --merged | egrep -v '\\*|develop|master' | xargs git branch -d; };f"
+
+  ## 代案
+  # pbcopy = !bash -c 'echo -n "$1" | pbcopy' --  # 上記issueに載ってた方法
+  # pbcopy = !echo "$1" | pbcopy  # 末尾に改行が入っても良ければこれでも良い
+
+[tig "bind"]
+  main = C !@git pbcopy %(commit)
+
